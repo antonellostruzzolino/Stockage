@@ -2,7 +2,8 @@
 
     window.Stockage = {
         Local: new factory(localStorage),
-        Session: new factory(sessionStorage)
+        Session: new factory(sessionStorage),
+        version: '0.2'
     };
 
 }) (function(container) {
@@ -13,7 +14,7 @@
         container.setItem(check, check);
         container.removeItem(check);
     } catch (e) {
-        console.log('Stockage is not supported!');
+        console.log('Local Storage is not supported!');
         return {};
     }
 
@@ -33,7 +34,6 @@
         },
 
         list: function() {
-
             var list = {};
             for (var i in container) {
                 var item = this.get(i);
