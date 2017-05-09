@@ -6,6 +6,8 @@
 
     return {
 
+        version: '0.1',
+
         get: function(key) {
             return this.list()[key] || null;
         },
@@ -23,8 +25,7 @@
             return this.get(key) ? true : false;
         },
 
-        list: function() {
-            
+        list: function() {            
             var list = {};
             var cookies = document.cookie ? document.cookie.split('; ') : [];
             for (var i = 0; i < cookies.length; i++) {
@@ -38,8 +39,7 @@
             this.set(key, '', { expires: 'Thu, 01 Jan 1970 00:00:00 GMT'});
         },
 
-        clear: function() {
-            
+        clear: function() {            
            var cookies = document.cookie ? document.cookie.split('; ') : [];
             for (var i = 0; i < cookies.length; i++) {
                 this.remove(cookies[i].split('=')[0]);
