@@ -17,15 +17,15 @@ You can access a Storage object calling Stockage.Local, Stockage.Session or Stoc
 
 ### Methods
 
-Each storage object has 6 methods: set(), get(), list(), has(), remove(), clear()
+Each storage object has 6 methods: `set()`, `get()`, `list()`, `has()`, `remove()`, `clear()`
 
 ### set
 
 Store a value in storage
 
 Arguments:
- - key (string)
- - value (string|Object)
+ - `key` (string)
+ - `value` (string|Object)
 
 ```
 Stockage.Local.set('count', 7);
@@ -41,10 +41,10 @@ Stockage.Cookie.set('cook', 86100);
 Check if a key was stored
 
 Arguments:
- - key (string)
+ - `key` (string)
 
 Returns:
-bool: true if the key was stored. If no value false is returned.
+bool: `true` if the key was stored. If no value `false` is returned.
 
 ```
 Stockage.Local.has('count'); 
@@ -60,10 +60,10 @@ Stockage.Local.has('foo');
 Retrieves specified value
 
 Arguments:
- - key (string)
+ - `key` (string)
 
 Returns:
-string|Object: The stored value. If no value null is returned.
+string|Object: The stored value. If no value `null` is returned.
 
 ```
 Stockage.Local.get('count'); 
@@ -87,7 +87,7 @@ Stockage.Local.list();
 Removes a value from storage
 
 Arguments:
- - key (string)
+ - `key` (string)
 
 ```
 Stockage.Local.remove('count');
