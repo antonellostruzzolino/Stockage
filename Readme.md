@@ -28,11 +28,12 @@ Arguments:
  - value (string|Object)
 
 ```
-// Set a key value
 Stockage.Local.set('count', 7);
 Stockage.Local.set('username', 'my_user');
 
 Stockage.Session.set('user', { name: 'Anton', age: 31 });
+
+Stockage.Cookie.set('cook', 86100);
 ```
 
 ### has
@@ -70,7 +71,13 @@ Stockage.Local.get('count');
 
 Stockage.Session.get('user'); 
 // -> { name: 'Anton', age: 31 }
+```
 
+### list
+
+Retrieves all values from storage
+
+```
 Stockage.Local.list();
 // -> Array[7, 'my_user']
 ```
