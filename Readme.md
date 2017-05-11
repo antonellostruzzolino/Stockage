@@ -7,7 +7,7 @@ Choose your storage method: localStorage, sessionStorage, or cookies.
 
 Copy the library in your web project and include it  
 
-```
+```html
 <script src="path/to/library/stockage.js"></script>
 ```
 
@@ -27,7 +27,7 @@ Arguments:
  - `key` **(string)**
  - `value` **(string|Object)**
 
-```
+```js
 Stockage.Local.set('count', 7);
 Stockage.Local.set('username', 'my_user');
 
@@ -47,7 +47,7 @@ Returns:
 
 **bool**: `true` if the key was stored. If no value `false` is returned.
 
-```
+```js
 Stockage.Local.has('count'); 
 // -> true
 
@@ -67,7 +67,7 @@ Returns:
 
 **string|Object**: The stored value. If no value `null` is returned.
 
-```
+```js
 Stockage.Local.get('count'); 
 // -> 7 
 
@@ -79,7 +79,7 @@ Stockage.Session.get('user');
 
 Retrieves all values from storage
 
-```
+```js
 Stockage.Local.list();
 // -> Array[7, 'my_user']
 ```
@@ -91,7 +91,7 @@ Removes a value from storage
 Arguments:
  - `key` **(string)**
 
-```
+```js
 Stockage.Local.remove('count');
 ```
 
@@ -99,7 +99,7 @@ Stockage.Local.remove('count');
 
 Removes all values from storage
 
-```
+```js
 Stockage.Session.clear();
 ```
 
