@@ -11,7 +11,7 @@
 
     var isStorageAvaiable = (function (container) {
 
-        if (container !== null) {
+        if (container != null) {
             var check = 'Stockage';            
             try {
                 container.setItem(check, check);
@@ -63,7 +63,7 @@
             }
         }
         
-    } else if (container !== null) {
+    } else if (container == null) {
 
         return {
 
